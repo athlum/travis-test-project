@@ -7,7 +7,7 @@ install_script:
    - whereis java
    - echo 'install_script'
 script:
-   - mvn install -Dmaven.test.skip=true -B
+   - mvn install -U -Dmaven.test.skip=true -B
 after_success:
    - mkdir webdeploy
    - cp web/target/web-1.0-SNAPSHOT.war webdeploy/
